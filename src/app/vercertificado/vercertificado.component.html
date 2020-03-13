@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div  *ngFor="let user of Usuario">
+                <form>
+                    <div class="card" style="justify-content: center;">
+                        <img src="../../assets/istl.PNG" class="card-img-top" style="width: 450px;" alt="...">
+                        <div class="card-body">
+                            <h1 class="card-title">Certifica</h1>
+                            <h1 class="card-subtitle">A</h1>
+                            <h1 class="card-title">{{user.names}}</h1>
+                            <p class="card-text">Por haber asistido a la Capacitación de {{user.name_carrer}} bajo el Proyecto “{{user.name_project}}”, en el barrio {{user.barrio}}, parroquia {{user.parroquia}}, Cantón Loja; con una duración de {{user.horas}}
+                                horas.</p>
+                        </div>
+                    </div>
+                </form>
+            </div><br>
 
-
-    
+            <div>
+                <form>
+                    <button type="submit" class="btn btn-primary" (click)="print()">Imprimir</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
+
+
+
 </html>
-
-
-<div *ngFor="let user of Usuario">
-    
-    <p>{{user.names}}</p>
-</div>

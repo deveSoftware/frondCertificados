@@ -5,9 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <!--JQUERY-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+  
   <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -23,32 +21,31 @@
 <body>
   <div>
     <div id="barra">
-    <div class="image">
-      <img src="../../assets/istl.PNG">
-    </div>
-  </div>
-  <br>
-  <div class="text-center">
-    <div class="col-sm-8 main-section">
-      <div class="modal-content">
-        <i class="fas fa-id-card"></i>
-      </div>
-      <div class="container" >
-        <form class="col-14" [formGroup]="form_validar" (ngSubmit)="getCertificado()">
-          <div class="form-group" id="user-group" >
-            
-            <input type="text" class="form-control" placeholder="INGRESE EL CÓDIGO DEL CERTIFICADO" [(ngModel)]="Certificado.codigo" formControlName="codigo" />
-  
-          </div>
-          <a href="verCertificado"><button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> BUSCAR </button></a>
-        </form>
+      <div class="image">
+        <img src="../../assets/istl.PNG">
       </div>
     </div>
-  </div>
-  <div *ngFor="let user of User">
-    <p>{{user.names}}</p>
-  </div>
-  </div>
+    <br>
+    <div class="text-center">
+      <div class="col-sm-8 main-section">
+        <div>
+          <i class="fas fa-id-card"></i>
+        </div>
+        <div class="container">
+          <form class="col-14" [formGroup]="form_validar" (ngSubmit)="getCertificado()" novalidate>
+            <div class="form-group" id="user-group">
+
+              <input type="text" autofocus='true' class="form-control" color="dark" placeholder="INGRESE EL CÓDIGO DEL CERTIFICADO"
+                [(ngModel)]="Certificado.codigo" formControlName="codigo" /><br>
+            </div>
+            <div class="boton" class="col-14">
+              <button type="submit" class="btn btn-dark "><i class="fas fa-sign-in-alt"></i> BUSCAR </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>  
 </body>
 
 </html>

@@ -11,7 +11,11 @@ export class VercertificadoComponent implements OnInit {
 
   ngOnInit(): void {
     this.Usuario=JSON.parse(localStorage.getItem("usuarios"))
-    console.log(this.Usuario)
+  }
+
+  print(){
+    console.log("hola")
+    window.print()
   }
 
 }

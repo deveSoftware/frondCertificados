@@ -3,7 +3,6 @@
     background: -webkit-linear-gradient(to right, #2980B9, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #FFFFFF, #fff, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 200px;
-    width: 100%;
 }
 
 
@@ -21,11 +20,11 @@
 
 
 .form-group input{
-    height: 52px;
+    height: 45px;
     font-size: 22px;
-    border:0;
     padding-left: 400px;
     border-radius: 500px;
+    border-color:black;
 }
 
 .form-group::before{
@@ -41,8 +40,8 @@
 }
 
 
-button{
-    width: 80%;
+.boton{
+    width: 500px;
     margin: 25px 0 25px;
     font-size: 25px;
 }
